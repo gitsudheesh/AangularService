@@ -10,12 +10,18 @@ import { AppComponent } from './app.component';
 // import { ProductEditComponent } from './product-edit/product-edit.component';
 // import { ProductAddComponent } from './product-add/product-add.component';
 import { CurrencyComponent } from './currency/currency.component';
+import { WeatherComponent } from './weather/weather.component';
 
 const appRoutes: Routes = [
   {
     path: 'currency',
     component: CurrencyComponent,
     data: { title: 'Currency' }
+  },
+  {
+    path: 'weather',
+    component: WeatherComponent,
+    data: { title: 'Weather' }
   },
   // {
   //   path: 'products',
@@ -50,7 +56,8 @@ const appRoutes: Routes = [
   //  ProductDetailComponent,
   //  ProductEditComponent,
   //  ProductAddComponent,
-   CurrencyComponent
+   CurrencyComponent,
+  WeatherComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
