@@ -5,6 +5,7 @@ import { map, catchError, tap } from 'rxjs/operators';
 
 
 const endpoint = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=74188710fac84a27419837a3287c1a11';
+
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
@@ -21,9 +22,11 @@ export class WeatherService {
     let body = res;
     return body || {};
   }
-  getProducts(): Observable<any> {
+  getProducts(name): Observable<any> {
+    var endpoint1=name;
+
     //return this.http.get(endpoint + 'products').pipe(
-    return this.http.get(endpoint).pipe(
+    return this.http.get(endpoint1).pipe(
       map(this.extractData));
   }
   getWeather(): Observable<any> {

@@ -1,2 +1,8 @@
 <h2>Weather {{weather.name|json}}</h2>
-<div><span>Description: </span>{{ weather|json }}</div>
+<input #name/>
+<br>
+<br>
+<button (click)="onClickMe(name.value)">Get Weather</button>
+<br>
+<div><span>Description: </span>{{ weather|json }}</div> 
+ 
